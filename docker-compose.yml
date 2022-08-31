@@ -1,0 +1,13 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: restaurant_application_web_frontend
+    networks : 
+      - restaurant
+    ports:
+      - "3000:3000"
+networks :
+    restaurant:
