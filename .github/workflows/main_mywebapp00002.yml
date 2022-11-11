@@ -9,6 +9,9 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: read
+  
 jobs:
   build:
     runs-on: windows-latest
@@ -34,6 +37,8 @@ jobs:
           path: .
 
   deploy:
+    permissions:
+      contents: none
     runs-on: ubuntu-latest
     needs: build
     environment:
