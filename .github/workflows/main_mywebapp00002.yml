@@ -8,7 +8,7 @@ on:
     branches:
       - main
   workflow_dispatch:
-  
+
 jobs:
   build:
     runs-on: windows-latest
@@ -26,9 +26,7 @@ jobs:
           npm install
           npm run build --if-present
           npm run test --if-present
-        env:
-          CI: false
-          
+      
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
@@ -54,5 +52,5 @@ jobs:
         with:
           app-name: 'MyWebApp00002'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2FDC8F14D1BD4C6BA7DC05E924112F86 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_842765923AC44048B316B7F584AECC97 }}
           package: .
