@@ -1,6 +1,4 @@
-import {HashRouter as Router, Switch} from 'react-router-dom';
-
-//import {BrowserRouter as Router, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Switch} from 'react-router-dom';
 
 import Login from './Features/Login/Controller';
 import Main from './Features/Main/Controller';
